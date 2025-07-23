@@ -32,7 +32,7 @@ app.get('/weather', async (req, res) => {
     });
 
   } catch (erro) {
-    console.error('❌ ERRO NA REQUISIÇÃO:', erro.response?.data || erro.message);  // 👈 Aqui o log do erro
+    console.error('ERRO NA REQUISIÇÃO:', erro.response?.data || erro.message);
     res.status(500).json({ erro: 'Erro ao buscar clima. Verifique o nome da cidade ou a chave da API.' });
   }
 });
